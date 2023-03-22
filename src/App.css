@@ -22,14 +22,6 @@ main {
   width: calc(70vw - 20px);
 }
 
-<<<<<<< HEAD
 .wine-title {
   width: auto;
-=======
-/* background image */
-
-body {
-  background-image: url(/src/images/backgroundTable.jpg);
-  background-size: cover;
->>>>>>> d737492a7e2ea3e7d71dc9f1805ad69535c0ba82
 }
