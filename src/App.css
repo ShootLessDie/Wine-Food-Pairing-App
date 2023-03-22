@@ -20,11 +20,15 @@ main {
 
 .recommendations-container {
   width: calc(70vw - 20px);
-}
 
-/* background image/ wallpaper */
+/* background image wallpaper */
 
 body {
   background-image: url(/src/images/backgroundTable.jpg);
   background-size: cover;
+}
+
+.wine-title {
+  width: auto;
+
 }
