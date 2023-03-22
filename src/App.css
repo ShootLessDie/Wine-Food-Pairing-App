@@ -22,7 +22,7 @@ main {
   width: calc(70vw - 20px);
 }
 
-/* background image */
+/* background image/ wallpaper */
 
 body {
   background-image: url(/src/images/backgroundTable.jpg);
