@@ -61,5 +61,3 @@ if you want to make any changes please fork from my repository [https://github.c
 # License
 
 MIT license
-
-TESTING
