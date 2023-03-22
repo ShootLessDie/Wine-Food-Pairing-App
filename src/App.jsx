@@ -7,7 +7,7 @@ const queryClient = new QueryClient();
 
 const baseURL = "https://api.spoonacular.com";
 const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
-
+// the begining of composition 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
@@ -15,12 +15,13 @@ function App() {
     </QueryClientProvider>
   );
 }
-
+// renders search bar, recommended wines and pairings
 function Body() {
   const [wine, setWine] = useState();
   const [type, setType] = useState("wine");
   const [wineForRecommendation, setWineForRecommendation] = useState();
 
+  // defines end point that we are going to use 
   const { data: pairings } = useQuery(
     ["dishPairingForWine", baseURL, apiKey, wine],
     async () => {
@@ -52,7 +53,7 @@ function Body() {
       enabled: !!wineForRecommendation || !!wine,
     }
   );
-
+ // call back function that executes when the form is submitted
   const onFormSubmit = useCallback(
     (e) => {
       e.preventDefault();
@@ -61,14 +62,14 @@ function Body() {
     },
     [setWine]
   );
-
+ // infer if the type is either wine or food 
   useEffect(() => {
     if (!wine) return;
 
     let formated_wine = wine.toLowerCase().replaceAll(" ", "_");
     setType(wines.wines.indexOf(formated_wine) !== -1 ? "wine" : "food");
   }, [wine, setType]);
-
+ // if it's wine than set the wine recommendation to the clicked wine 
   const onWineClick = useCallback((e) => {
     e.preventDefault();
     setWineForRecommendation(e.target.innerText);
