@@ -47,10 +47,14 @@ Interface and UI [https://mui.com/]
 
 # Support
 
-If you have any questions please don't hesitate and contact 
+If you have any questions please don't hesitate and contact:
 
 blago.diskov@outlook.com Front End Developer [https://github.com/boxitooo6629]
+
+
 bjenner27@gmail.com      Front End Developer [https://github.com/Bronwen27]
+
+
 gellert.eke@outlook.com  Full Stack Developer[https://github.com/ShootLessDie]
 
 
