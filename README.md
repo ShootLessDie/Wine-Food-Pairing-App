@@ -1,5 +1,5 @@
 # Food and Wine Pairing Application
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 # Description
@@ -77,3 +77,4 @@ if you want to make any changes please fork from this repository [https://github
 # License
 
 MIT license
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
