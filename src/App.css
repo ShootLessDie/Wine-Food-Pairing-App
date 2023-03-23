@@ -18,18 +18,30 @@ main {
   margin-right: 20px;
 }
 
-.recommendations-container {
+.recommendations-container { 
   width: calc(70vw - 20px);
 }
+
 
 .wine-title {
   width: auto;
 }
+
+/* background image wallpaper */
+
+
 body {
   background-image: url(/src/images/backgroundTable.jpg);
   background-size: cover;
 }
 
+
 /* .section {
   height: 100vh ;
 } */
+
+.wine-title {
+  width: auto;
+
+}
+
