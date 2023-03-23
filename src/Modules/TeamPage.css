@@ -1,0 +1,13 @@
+h1, h2, h3{
+    color: #f6eee8;
+    
+  }
+
+h1{
+    text-align: center;
+    font-size: 5em;
+}
+
+.profilePictures{
+    border-radius: 40%;
+}
