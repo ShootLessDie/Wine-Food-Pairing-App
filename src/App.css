@@ -31,7 +31,7 @@ main {
 
 
 body {
-  background-image: url(/src/images/backgroundTable.jpg);
+  background-image: url(/src/assets/images/backgroundTable.jpg);
   background-size: cover;
 }
 
