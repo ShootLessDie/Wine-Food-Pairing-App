@@ -153,7 +153,6 @@ import LandingPage from "./Modules/LandingPage";
 import ProblemPage from "./Modules/ProblemPage";
 import TeamPage from "./Modules/TeamPage";
 
-
 const App = () => (
   // <ReactFullpage
   //   anchors={anchors}
@@ -190,13 +189,13 @@ const App = () => (
       return (
         <ReactFullpage.Wrapper>
           <div className="section">
-          <LandingPage/>
+            <LandingPage />
           </div>
           <div className="section">
-          <ProblemPage/>
+            <ProblemPage />
           </div>
           <div className="section">
-            <TeamPage/>
+            <TeamPage />
           </div>
         </ReactFullpage.Wrapper>
       );
