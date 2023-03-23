@@ -10,7 +10,7 @@ const LandingPage = () => {
       maxWidth="1"
       sx={{ bgcolor: "#cfe8fc", height: "100vh", width: "100%" }}
     >
-      <Grid container spacing={2} sx={{margin: 0}}>
+      <Grid container spacing={2} sx={{ margin: 0 }}>
         <Grid xs={8}>
           <div>Bla</div>
         </Grid>
