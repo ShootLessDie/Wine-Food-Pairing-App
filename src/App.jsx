@@ -150,6 +150,8 @@ import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "./index.css";
 import LandingPage from "./Modules/LandingPage";
+import ProblemPage from "./Modules/ProblemPage";
+import TeamPage from "./Modules/TeamPage";
 
 
 const App = () => (
@@ -191,10 +193,10 @@ const App = () => (
           <LandingPage/>
           </div>
           <div className="section">
-            <p>Section 2</p>
+          <ProblemPage/>
           </div>
           <div className="section">
-            <p>Section 2</p>
+            <TeamPage/>
           </div>
         </ReactFullpage.Wrapper>
       );
