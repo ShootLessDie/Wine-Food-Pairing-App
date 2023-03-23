@@ -4,32 +4,37 @@ body {
   background-repeat: no-repeat;
 }
 
-.containerClass{
+.containerClass {
   background: linear-gradient(#551c36, #76284b);
-
+  z-index: -1;
 }
 
-h1, h2{
-  color: #f6eee8
+h1,
+h2 {
+  color: #f6eee8;
+  z-index: 1;
 }
 
-
-h2{
+h2 {
   margin: 2%;
 }
 
-.wineStain{
+.wineStain {
   position: absolute;
-  z-index:-0;
+  z-index: -0;
   filter: blur(1px) opacity(50%) drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.241));
   right: 10px;
   top: 10px;
-} 
+}
 
-.wineStain2{
+.wineStain2 {
   position: absolute;
-  z-index:-0;
+  z-index: -0;
   filter: blur(1px) opacity(40%) drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.241));
   left: 10px;
-  bottom: 10px
-} 
+  bottom: 10px;
+}
+
+.wineImage {
+  z-index: 0;
+}

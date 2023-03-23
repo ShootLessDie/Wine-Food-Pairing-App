@@ -18,18 +18,22 @@ const TeamPage = () => {
       <br />
       <br />
 
-      <Grid container spacing={2} sx={{ margin: 0}}>
+      <Grid container spacing={2} sx={{ margin: 0 }}>
         <Grid xl={4}>
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-            //   height: "100%",
+              //   height: "100%",
               flexDirection: "column",
             }}
           >
-            <img className="profilePictures" src="https://via.placeholder.com/360x360" alt="" />
+            <img
+              className="profilePictures"
+              src="https://via.placeholder.com/360x360"
+              alt=""
+            />
             <h2>Blago Dishkov</h2>
             <h3>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -48,11 +52,15 @@ const TeamPage = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-            //   height: "100%",
+              //   height: "100%",
               flexDirection: "column",
             }}
           >
-            <img className="profilePictures" src="https://via.placeholder.com/360x360" alt="" />
+            <img
+              className="profilePictures"
+              src="https://via.placeholder.com/360x360"
+              alt=""
+            />
             <h2>Gellert Eke</h2>
             <h3>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -71,11 +79,15 @@ const TeamPage = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-            //   height: "100%",
+              //   height: "100%",
               flexDirection: "column",
             }}
           >
-            <img className="profilePictures" src="https://via.placeholder.com/360x360" alt="" />
+            <img
+              className="profilePictures"
+              src="https://via.placeholder.com/360x360"
+              alt=""
+            />
             <h2>Bronwen Jenner</h2>
             <h3>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

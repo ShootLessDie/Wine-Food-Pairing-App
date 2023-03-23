@@ -10,11 +10,7 @@ import wineStainImage2 from "../assets/images/wine-stain-8.png";
 const LandingPage = () => {
   console.log(wineStainImage);
   return (
-    <Container
-      maxWidth="1"
-      sx={{ width: "100%" }}
-      className="containerClass"
-    >
+    <Container maxWidth="1" sx={{ width: "100%" }} className="containerClass">
       <img
         className="wineStain"
         src={wineStainImage}
@@ -63,7 +59,7 @@ const LandingPage = () => {
               flexDirection: "column",
             }}
           >
-            <img src={image} alt="" />
+            <img src={image} alt="" className="wineImage" />
           </Box>
         </Grid>
       </Grid>
