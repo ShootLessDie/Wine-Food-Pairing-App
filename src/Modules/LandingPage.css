@@ -9,6 +9,7 @@ body {
   z-index: -1;
 }
 
+/* title color-changing animation */
 .title {
   font-family: Poor Richard;
   display: flex;
@@ -95,14 +96,33 @@ h2 {
   color: #f6eee8;
   z-index: 1;
 }
-
+/* text type animation */
 #landingH2 {
   font-family: Lucida Handwriting;
   font-weight: lighter;
   font-size: 40px;
-  background: -webkit-linear-gradient(#8a21381e, #7f2a36,rgba(135, 38, 65, 0));
-  color: #441013;
-  text-shadow: #E4A9A8;
+  color: #e47d7d;
+  text-shadow: 2px 2px 8px #250a0a;
+}
+
+.line-1{
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
 
 h2 {
