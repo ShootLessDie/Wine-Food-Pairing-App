@@ -101,8 +101,10 @@ h2 {
   font-family: Lucida Handwriting;
   font-weight: lighter;
   font-size: 40px;
-  color: #e47d7d;
-  text-shadow: 2px 2px 8px #250a0a;
+  text-shadow: 6px 6px 10px #250a0a;
+  background-image: linear-gradient(180deg, #fcf6f6, rgb(241, 6, 6));
+  background-clip: text;
+  color: transparent;
 }
 
 .line-1{
@@ -155,7 +157,7 @@ h2 {
 .wineImage {
   z-index: 0;
 }
-
+ /* product description and meet the team title gradient */
 #gradient-text {
   font-family: poor richard;
   background-image: linear-gradient(60deg, #bb1f3b, pink);
