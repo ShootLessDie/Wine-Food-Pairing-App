@@ -9,6 +9,88 @@ body {
   z-index: -1;
 }
 
+.title {
+  font-family: Poor Richard;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.title-word {
+  animation: color-animation 4s ease-in-out infinite alternate;
+  animation-timing-function: ease-in-out;
+  display: block;
+}
+
+.title-word-3 {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.title-word-3, .title-word-5, .title-word-6 {
+  display: inline-block; 
+}
+
+.title-word-3, .title-word-4 {
+  display: block;
+}
+
+.title-word-container {
+  display: flex;
+}
+
+.title-word-1 {
+  font-family: Edwardian Script ITC ; 
+  --color-1: #E4A9A8;
+  --color-2: #E4A9A8;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  font-size: larger;
+  --color-1: rgb(173, 7, 7);
+  --color-2: #3f040f;
+}
+
+.title-word-3 {
+  --color-1: #E4A9A8;
+  --color-2: #E4A9A8;
+  --color-3: #E4A9A8;
+}
+
+.title-word-4 {
+  font-size: larger;
+  --color-1: #3f040f;
+  --color-2: rgb(173, 7, 7);
+}
+
+.title-word-5 {
+  font-size: larger;
+  --color-1: #E4A9A8;
+  --color-2: #E4A9A8;
+  --color-3: #E4A9A8;
+}
+
+.title-word-6 {
+  font-family: Edwardian Script ITC; 
+  --color-1: #E4A9A8;
+  --color-2: #E4A9A8;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  66%   {color: var(--color-2)}
+  100%   {color: var(--color-2)}
+  66%   {color: var(--color-2)}
+  32%   {color: var(--color-1)}
+  0%    {color: var(--color-1)}
+}
+
 h1,
 h2 {
   color: #f6eee8;
