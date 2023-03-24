@@ -1,3 +1,4 @@
+
 h1,
 h2,
 h3 {
@@ -11,4 +12,5 @@ h1 {
 
 .profilePictures {
   border-radius: 40%;
+  width: 25rem
 }
