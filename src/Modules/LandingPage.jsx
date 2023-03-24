@@ -48,7 +48,7 @@ const LandingPage = () => {
     <span class="title-word title-word-6">App </span>
    </h1>
             <h2 id="landingH2">
-              The only guide you'll ever need for wine-pairing! 
+              Your wine-pairing companion app.
           </h2>
           </Box>
         </Grid>

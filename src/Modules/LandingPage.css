@@ -99,9 +99,10 @@ h2 {
 #landingH2 {
   font-family: Lucida Handwriting;
   font-weight: lighter;
-  font-size: 30px;
-  background: -webkit-linear-gradient(#8a21381e, #3d010a,rgba(135, 38, 65, 0));
-  color: #ebc0bf;
+  font-size: 40px;
+  background: -webkit-linear-gradient(#8a21381e, #7f2a36,rgba(135, 38, 65, 0));
+  color: #441013;
+  text-shadow: #E4A9A8;
 }
 
 h2 {
@@ -133,4 +134,11 @@ h2 {
 
 .wineImage {
   z-index: 0;
+}
+
+#gradient-text {
+  font-family: poor richard;
+  background-image: linear-gradient(60deg, #ac159b, #a6f234);
+  background-clip: text;
+  color: transparent;
 }
