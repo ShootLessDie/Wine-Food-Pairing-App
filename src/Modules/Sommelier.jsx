@@ -1,18 +1,22 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { QueryClient, QueryClientProvider, useQuery } from "react-query";
-import "./App.css";
-import wines from "./wines.json";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import LandingPage from "./Modules/LandingPage";
+import wines from "../wines.json";
+
+
+// const Sommelier = () => {
+
 
 const queryClient = new QueryClient();
 
 const baseURL = "https://api.spoonacular.com";
-const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
+// const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
+const apiKey = "0bbbab3c5eaa41a69f2609a688be4d0a"
+// console.log(apiKey)
 // the begining of composition
-function App() {
+function Sommelier() {
   return (
     <QueryClientProvider client={queryClient}>
       <Body />
@@ -80,11 +84,6 @@ function Body() {
   }, []);
 
   return (
-    <Container >
-      <LandingPage></LandingPage>
-      // <Box sx={{ bgcolor: "#cfe8fc", height: "100vh"}} />
-    // </Container>
-
     <main>
       <form className="search-form" onSubmit={onFormSubmit}>
         <datalist id="wineSearchDataList">
@@ -144,72 +143,5 @@ function Body() {
     </main>
   );
 }
-export default App;
 
-import React from "react";
-import "./index.css";
-import { Routes, Route } from "react-router-dom";
-import MainPage from "./Modules/MainPage";
-import Sommelier from "./Modules/Sommelier";
-
-
-const App = () => (
-  <ReactFullpage
-    anchors={anchors}
-    navigation
-    navigationTooltips={anchors}
-    navigat
-    licenseKey="gplv3-license"
-    credits={false}
-    sectionsColor={["#7fff00","#00ffff","#29ab87" ]}
-    onLeave={(origin, destination, direction) => {
-      console.log("onLeave event", { origin, destination, direction });
-    }}
-    render={({ state, fullpageApi }) => {
-      console.log("render prop change", state, fullpageApi);
-
-      return (
-        <div>
-          <div className="section"><h3>Section 1</h3></div>
-          <div className="section"><h3>Section 2</h3></div>
-          <div className="section"><h3>Section 3</h3></div>
-        </div>
-      );
-    }}
-  />
-
-  <ReactFullpage
-    //fullpage options
-    navigation
-    licenseKey={"gplv3-license"}
-    credits={false}
-    scrollingSpeed={700} /* Options here */
-    // sectionsColor={["#7fff00", "#00ffff", "#29ab87"]}
-    render={({ state, fullpageApi }) => {
-      return (
-        <ReactFullpage.Wrapper>
-          <div className="section">
-            <LandingPage />
-          </div>
-          <div className="section">
-            <ProblemPage />
-          </div>
-          <div className="section">
-            <TeamPage />
-          </div>
-        </ReactFullpage.Wrapper>
-      );
-    }}
-  />
-);
-=======
-const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<MainPage />}/>
-      <Route path="/sommelier" element={<Sommelier />}/>
-    </Routes>
-  );
-};
-
-export default App;
+export default Sommelier

@@ -6,6 +6,8 @@ import Grid from "@mui/material/Unstable_Grid2";
 import image from "../assets/icons/wineGlassBottle.png";
 import wineStainImage from "../assets/images/wine-stain-5.png";
 import wineStainImage2 from "../assets/images/wine-stain-8.png";
+import { Button } from "@mui/material";
+import { NavLink, Link } from "react-router-dom";
 
 const LandingPage = () => {
   console.log(wineStainImage);
@@ -37,19 +39,24 @@ const LandingPage = () => {
               flexDirection: "column",
             }}
           >
-    <h1 class="title">
-     <span class="title-word title-word-1">The </span>
-     <div class="title-word-container">
-      <span class="title-word title-word-2">Wine </span>
-      <span class="title-word title-word-3"> & </span>
-      <span class="title-word title-word-4"> Food </span>
-     </div>
-    <span class="title-word title-word-5">Pairing </span>
-    <span class="title-word title-word-6">App </span>
-   </h1>
-            <h2  class="line-1 anim-typewriter" id="landingH2">
+            <h1 class="title">
+              <span class="title-word title-word-1">The </span>
+              <div class="title-word-container">
+                <span class="title-word title-word-2">Wine </span>
+                <span class="title-word title-word-3"> & </span>
+                <span class="title-word title-word-4"> Food </span>
+              </div>
+              <span class="title-word title-word-5">Pairing </span>
+              <span class="title-word title-word-6">App </span>
+            </h1>
+            <h2 class="line-1 anim-typewriter" id="landingH2">
               Your personal Sommelier, at your service...
-          </h2>
+            </h2>
+            <Link to="/sommelier" style={{ textDecoration: 'none' }}>
+            <Button variant="contained" size="large" color="error" sx={{backgroundColor:"#ad0707"}} >
+              Show suggestions
+            </Button>
+            </Link>
           </Box>
         </Grid>
         <Grid xs={4}>
