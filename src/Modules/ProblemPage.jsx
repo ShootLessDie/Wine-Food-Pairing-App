@@ -17,16 +17,13 @@ const ProblemPage = () => {
           flexDirection: "column",
         }}
       >
-        <h1>The Wine & Food Pairing App</h1>
+        <h1 id="gradient-text">The Wine & Food Pairing App</h1>
+        
         <h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </h2>
+            <span class="from">From novice to connoisseur… </span>this app is designed to be used by all as the perfect accompaniment to any truly great dining experience. <br></br>
+            <br></br>Simply enter either the meal or wine that you wish to pair to generate a list of suitable culinary companions. <br></br>
+            <br></br>Hosting the perfect dinner party has never been easier!
+            </h2>
       </Box>
     </Container>
   );

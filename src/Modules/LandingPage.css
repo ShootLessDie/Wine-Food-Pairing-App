@@ -9,14 +9,133 @@ body {
   z-index: -1;
 }
 
+/* title color-changing animation */
+.title {
+  font-family: Poor Richard;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title-word {
+  animation: color-animation 4s ease-in-out infinite alternate;
+  animation-timing-function: ease-in-out;
+  display: block;
+}
+
+.title-word-3 {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.title-word-3, .title-word-5, .title-word-6 {
+  display: inline-block; 
+}
+
+.title-word-3, .title-word-4 {
+  display: block;
+}
+
+.title-word-container {
+  display: flex;
+}
+
+.title-word-1 {
+  font-family: Edwardian Script ITC ; 
+  --color-1: #E4A9A8;
+  --color-2: #E4A9A8;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  font-size: larger;
+  --color-1: rgb(173, 7, 7);
+  --color-2: #3f040f;
+}
+
+.title-word-3 {
+  --color-1: #E4A9A8;
+  --color-2: #E4A9A8;
+  --color-3: #E4A9A8;
+}
+
+.title-word-4 {
+  font-size: larger;
+  --color-1: #3f040f;
+  --color-2: rgb(173, 7, 7);
+}
+
+.title-word-5 {
+  font-size: larger;
+  --color-1: #E4A9A8;
+  --color-2: #E4A9A8;
+  --color-3: #E4A9A8;
+}
+
+.title-word-6 {
+  font-family: Edwardian Script ITC; 
+  --color-1: #E4A9A8;
+  --color-2: #E4A9A8;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  66%   {color: var(--color-2)}
+  100%   {color: var(--color-2)}
+  66%   {color: var(--color-2)}
+  32%   {color: var(--color-1)}
+  0%    {color: var(--color-1)}
+}
+
 h1,
 h2 {
   color: #f6eee8;
   z-index: 1;
 }
+/* text type animation */
+#landingH2 {
+  font-family: Lucida Handwriting;
+  font-weight: lighter;
+  font-size: 40px;
+  text-shadow: 6px 6px 10px #250a0a;
+  background-image: linear-gradient(180deg, #fcf6f6, rgb(241, 6, 6));
+  background-clip: text;
+  color: transparent;
+}
+
+.line-1{
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
 
 h2 {
   margin: 2%;
+  text-align: center;
+  font-family: Baguet Script;
+}
+
+.from {
+  font-family: Lucida Handwriting;
+  font-size: 40px;
 }
 
 .wineStain {
@@ -37,4 +156,11 @@ h2 {
 
 .wineImage {
   z-index: 0;
+}
+ /* product description and meet the team title gradient */
+#gradient-text {
+  font-family: poor richard;
+  background-image: linear-gradient(60deg, #bb1f3b, pink);
+  background-clip: text;
+  color: transparent;
 }

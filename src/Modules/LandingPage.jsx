@@ -37,16 +37,19 @@ const LandingPage = () => {
               flexDirection: "column",
             }}
           >
-            <h1>The Wine & Food Pairing App</h1>
-            <h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </h2>
+    <h1 class="title">
+     <span class="title-word title-word-1">The </span>
+     <div class="title-word-container">
+      <span class="title-word title-word-2">Wine </span>
+      <span class="title-word title-word-3"> & </span>
+      <span class="title-word title-word-4"> Food </span>
+     </div>
+    <span class="title-word title-word-5">Pairing </span>
+    <span class="title-word title-word-6">App </span>
+   </h1>
+            <h2  class="line-1 anim-typewriter" id="landingH2">
+              Your personal Sommelier, at your service...
+          </h2>
           </Box>
         </Grid>
         <Grid xs={4}>

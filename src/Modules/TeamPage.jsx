@@ -12,7 +12,7 @@ const TeamPage = () => {
     >
       <br />
       <br />
-      <h1>Meet the Team</h1>
+      <h1 id="gradient-text">Meet the Team</h1>
       <br />
       <br />
       <br />
