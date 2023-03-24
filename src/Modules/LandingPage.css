@@ -15,7 +15,6 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
 }
 
 .title-word {
@@ -97,8 +96,23 @@ h2 {
   z-index: 1;
 }
 
+#landingH2 {
+  font-family: Lucida Handwriting;
+  font-weight: lighter;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#8a21381e, #3d010a,rgba(135, 38, 65, 0));
+  color: #ebc0bf;
+}
+
 h2 {
   margin: 2%;
+  text-align: center;
+  font-family: Baguet Script;
+}
+
+.from {
+  font-family: Lucida Handwriting;
+  font-size: 40px;
 }
 
 .wineStain {
