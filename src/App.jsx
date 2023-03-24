@@ -147,59 +147,17 @@ import Container from "@mui/material/Container";
 // export default App;
 
 import React from "react";
-import ReactFullpage from "@fullpage/react-fullpage";
 import "./index.css";
-import LandingPage from "./Modules/LandingPage";
-import ProblemPage from "./Modules/ProblemPage";
-import TeamPage from "./Modules/TeamPage";
+import { Routes, Route } from "react-router-dom";
+import MainPage from "./Modules/MainPage";
+import Sommelier from "./Modules/Sommelier";
 
-const App = () => (
-  // <ReactFullpage
-  //   anchors={anchors}
-  //   navigation
-  //   navigationTooltips={anchors}
-  //   navigat
-  //   licenseKey="gplv3-license"
-  //   credits={false}
-  //   sectionsColor={["#7fff00","#00ffff","#29ab87" ]}
-  //   onLeave={(origin, destination, direction) => {
-  //     console.log("onLeave event", { origin, destination, direction });
-  //   }}
-  //   render={({ state, fullpageApi }) => {
-  //     console.log("render prop change", state, fullpageApi);
-
-  //     return (
-  //       <div>
-  //         <div className="section"><h3>Section 1</h3></div>
-  //         <div className="section"><h3>Section 2</h3></div>
-  //         <div className="section"><h3>Section 3</h3></div>
-  //       </div>
-  //     );
-  //   }}
-  // />
-
-  <ReactFullpage
-    //fullpage options
-    navigation
-    licenseKey={"gplv3-license"}
-    credits={false}
-    scrollingSpeed={700} /* Options here */
-    // sectionsColor={["#7fff00", "#00ffff", "#29ab87"]}
-    render={({ state, fullpageApi }) => {
-      return (
-        <ReactFullpage.Wrapper>
-          <div className="section">
-            <LandingPage />
-          </div>
-          <div className="section">
-            <ProblemPage />
-          </div>
-          <div className="section">
-            <TeamPage />
-          </div>
-        </ReactFullpage.Wrapper>
-      );
-    }}
-  />
-);
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<MainPage />}/>
+      <Route path="/sommelier" element={<Sommelier />}/>
+    </Routes>
+  );
+};
 export default App;
