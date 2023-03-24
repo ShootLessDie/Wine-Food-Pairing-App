@@ -2,6 +2,9 @@ import { Grid } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
 import "./TeamPage.css";
+import blago from "../assets/images/blago.jpg";
+import gellert from "../assets/images/gellert.jpg";
+import bronwen from "../assets/images/bronwen.jpg";
 
 const TeamPage = () => {
   return (
@@ -31,7 +34,7 @@ const TeamPage = () => {
           >
             <img
               className="profilePictures"
-              src="https://via.placeholder.com/360x360"
+              src={blago}
               alt=""
             />
             <h2>Blago Dishkov</h2>
@@ -58,7 +61,7 @@ const TeamPage = () => {
           >
             <img
               className="profilePictures"
-              src="https://via.placeholder.com/360x360"
+              src={gellert}
               alt=""
             />
             <h2>Gellert Eke</h2>
@@ -85,7 +88,7 @@ const TeamPage = () => {
           >
             <img
               className="profilePictures"
-              src="https://via.placeholder.com/360x360"
+              src={bronwen}
               alt=""
             />
             <h2>Bronwen Jenner</h2>
