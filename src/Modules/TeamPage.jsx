@@ -5,6 +5,8 @@ import "./TeamPage.css";
 import blago from "../assets/images/blago.jpg";
 import gellert from "../assets/images/gellert.jpg";
 import bronwen from "../assets/images/bronwen.jpg";
+import github from "../assets/images/github-logo.png";
+import linkedin from "../assets/images/linkedin-logo.png";
 
 const TeamPage = () => {
   return (
@@ -89,15 +91,14 @@ const TeamPage = () => {
               src={bronwen}
               alt=""
             />
-            <h2>Bronwen Jenner</h2>
+             <h2>Bronwen Jenner</h2>
             <h3>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Front-End Web Development Student 
+              <br></br>Studying with EdX Bootcamp
+
+             <br></br>  <img src={github} alt="GitHub" /> Github: <a href="https://github.com/Bronwen27">Bronwen27</a>
+
+              <br></br>  <img src={linkedin} alt="GitHub" /> LinkedIn: <a href="https://www.linkedin.com/in/bronwen-jenner-a376a5195/ ">Bronwen-Jenner</a>
             </h3>
           </Box>
         </Grid>
