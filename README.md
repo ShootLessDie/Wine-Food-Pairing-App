@@ -29,6 +29,8 @@ Copy the API and paste into the variable const apiKey.
 ```
 
 # Usage 
+Simply click on the deployed web site : [https://glistening-hamster-0fe3d4.netlify.app/]
+
 To run development server with hot reloading run the command below.
 
 ```bash 

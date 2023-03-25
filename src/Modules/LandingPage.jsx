@@ -54,7 +54,7 @@ const LandingPage = () => {
             </h2>
             <Link to="/sommelier" style={{ textDecoration: 'none' }}>
             <Button variant="contained" size="large" color="error" sx={{backgroundColor:"#ad0707"}} >
-              Show suggestions
+              Show Recommendations
             </Button>
             </Link>
           </Box>
