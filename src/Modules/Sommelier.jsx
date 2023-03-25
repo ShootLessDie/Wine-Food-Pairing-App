@@ -4,16 +4,20 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import wines from "../wines.json";
-
+import "./Sommelier.css";
+import { Autocomplete, TextField } from "@mui/material";
+import Button from "@mui/material/Button";
+import { TypeAnimation } from "react-type-animation";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Link } from "react-router-dom";
 
 // const Sommelier = () => {
-
 
 const queryClient = new QueryClient();
 
 const baseURL = "https://api.spoonacular.com";
 // const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
-const apiKey = "0bbbab3c5eaa41a69f2609a688be4d0a"
+const apiKey = "0bbbab3c5eaa41a69f2609a688be4d0a";
 // console.log(apiKey)
 // the begining of composition
 function Sommelier() {
@@ -28,11 +32,19 @@ function Body() {
   const [wine, setWine] = useState();
   const [type, setType] = useState("wine");
   const [wineForRecommendation, setWineForRecommendation] = useState();
+  const [searchItem, setSearchItem] = useState("");
+
+  let wineArray = [];
+
+  wines.wines.map((value, index) =>
+    wineArray.push({ label: value.replaceAll("_", " ") })
+  );
 
   // defines end point that we are going to use
   const { data: pairings } = useQuery(
     ["dishPairingForWine", baseURL, apiKey, wine],
     async () => {
+      console.log(wine);
       return fetch(
         `${baseURL}/food/wine/dishes?wine=${wine}&apiKey=${apiKey}`
       ).then((res) => res.json());
@@ -48,6 +60,8 @@ function Body() {
   const { data: recommendations } = useQuery(
     ["wineRecommendations", baseURL, apiKey, wine, wineForRecommendation],
     async () => {
+      console.log(wine);
+      console.log(wineForRecommendation);
       return fetch(
         `${baseURL}/food/wine/recommendation?wine=${
           wineForRecommendation || wine
@@ -62,14 +76,10 @@ function Body() {
     }
   );
   // call back function that executes when the form is submitted
-  const onFormSubmit = useCallback(
-    (e) => {
-      e.preventDefault();
-      setWine(e.target.wine.value);
-      setWineForRecommendation(null);
-    },
-    [setWine]
-  );
+  const onFormSubmit = () => {
+    setWine(searchItem);
+    setWineForRecommendation(null);
+  };
   // infer if the type is either wine or food
   useEffect(() => {
     if (!wine) return;
@@ -78,70 +88,138 @@ function Body() {
     setType(wines.wines.indexOf(formated_wine) !== -1 ? "wine" : "food");
   }, [wine, setType]);
   // if it's wine than set the wine recommendation to the clicked wine
-  const onWineClick = useCallback((e) => {
-    e.preventDefault();
+  const onWineClick = (e) => {
     setWineForRecommendation(e.target.innerText);
-  }, []);
+  };
 
   return (
     <main>
-      <form className="search-form" onSubmit={onFormSubmit}>
-        <datalist id="wineSearchDataList">
-          {wines.wines.map((value, index) => (
-            <option key={index}>{value.replaceAll("_", " ")}</option>
-          ))}
-        </datalist>
-        <input
-          type="text"
-          list="wineSearchDataList"
-          className="search-input"
-          placeholder="Food or wine"
-          name="wine"
+      <Container
+        maxWidth="xl"
+        sx={{
+          backgroundColor: "#fffffff2",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "80%",
+          flexDirection: "column",
+          borderRadius: "10px",
+          boxShadow:
+            "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
+        }}
+      >
+
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Button
+            variant="outlined"
+            size="large"
+            color="error"
+            sx={{marginTop:"2em"}}
+          >
+            <ArrowBackIcon sx={{ fontSize: "large" }} /> Back
+          </Button>
+        </Link>
+
+
+        <TypeAnimation
+          sequence={[
+            // Same String at the start will only be typed once, initially
+            "I would like some...",
+            1000,
+            "I would like some steak",
+            1000,
+            "I would like some tortillas",
+            1000,
+            "I would like some ... hmmm",
+            1500,
+            "I would like some nachos",
+            1000,
+            "I would like a burger",
+            1000,
+            "I would like some pizza",
+            1500,
+          ]}
+          wrapper="h1"
+          speed={50}
+          //   style={{ fontSize: "2em" }}
+          repeat={Infinity}
         />
-        <input type="submit" value="Search" />
-      </form>
-      <section className="results-container">
-        {!!pairings?.pairings?.length && (
-          <aside className="pairings-container">
-            <h2>Pairs best with</h2>
-            {type === "food" && (
+        <h3>Search below for the best food and wine pairings!</h3>
+        <br />
+        <Autocomplete
+          // disablePortal
+          freeSolo
+          id="combo-box-demo"
+          options={wineArray}
+          sx={{ width: 300 }}
+          value={searchItem}
+          onChange={(event, newValue) => {
+            console.log(newValue);
+            setSearchItem(newValue.label);
+          }}
+          inputValue={searchItem}
+          onInputChange={(event, newInputValue) => {
+            console.log(newInputValue);
+            setSearchItem(newInputValue);
+          }}
+          renderInput={(params) => (
+            <TextField {...params} label="Food or Wine" />
+          )}
+        />
+        <br />
+        <Button
+          variant="contained"
+          size="large"
+          onClick={() => onFormSubmit()}
+          color="error"
+          sx={{ backgroundColor: "#ad0707" }}
+        >
+          Search
+        </Button>
+
+        <section className="results-container">
+          {!!pairings?.pairings?.length && (
+            <aside className="pairings-container">
+              <h2>Pairs best with</h2>
+              {type === "food" && (
+                <ul>
+                  {pairings?.pairings?.map((value, index) => (
+                    <li key={index}>
+                      <button onClick={(e) => onWineClick(e)}>{value}</button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {type === "wine" && (
+                <ul>
+                  {pairings?.pairings?.map((value, index) => (
+                    <li key={index}>{value}</li>
+                  ))}
+                </ul>
+              )}
+            </aside>
+          )}
+          {!!recommendations?.recommendedWines?.length && (
+            <div className="recommendations-container">
+              <h2>Wine Recommendations</h2>
               <ul>
-                {pairings?.pairings?.map((value, index) => (
+                {recommendations?.recommendedWines?.map((wine, index) => (
                   <li key={index}>
-                    <button onClick={onWineClick}>{value}</button>
+                    <h3>{wine.title}</h3>
+                    <img src={wine.imageUrl} alt={wine.title} />
+                    <span className="wine-recommendations-price">
+                      {wine.price}
+                    </span>
+                    <p>{wine.description}</p>
                   </li>
                 ))}
               </ul>
-            )}
-            {type === "wine" && (
-              <ul>
-                {pairings?.pairings?.map((value, index) => (
-                  <li key={index}>{value}</li>
-                ))}
-              </ul>
-            )}
-          </aside>
-        )}
-        {!!recommendations?.recommendedWines?.length && (
-          <div className="recommendations-container">
-            <h2>Wine Recommendations</h2>
-            <ul>
-              {recommendations?.recommendedWines?.map((wine, index) => (
-                <li key={index}>
-                  <h3>{wine.title}</h3>
-                  <img src={wine.imageUrl} alt={wine.title} />
-                  <span className="wine-recommendations-price">
-                    {wine.price}
-                  </span>
-                  <p>{wine.description}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </section>
+            </div>
+          )}
+        </section>
+      </Container>
     </main>
   );
 }
 
-export default Sommelier
+export default Sommelier;
