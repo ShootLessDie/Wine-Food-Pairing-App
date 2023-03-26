@@ -1,6 +1,13 @@
 
 .text {
   color: #f6eee8;
+  text-align: center;
+}
+
+h2 {
+text-align: center;
+  font-family:Verdana;
+  font-size:xx-large;
 }
 
 h1 {
@@ -10,5 +17,34 @@ h1 {
 
 .profilePictures {
   border-radius: 40%;
-  width: 25rem
+  width: 25rem;
+  height: 24rem;
+  transition: opacity 0.3s ease-in-out;
 }
+
+/* Blago profile */
+.logo-holder {position:relative; }
+.logo-holder #blagoPicture,
+.logo-holder .textBlago {transition: opacity 0.5s ease-in-out;}
+.logo-holder .textBlago {position:absolute; top:0; left:0; opacity:0;}
+
+.logo-holder:hover #blagoPicture {opacity:0;}
+.logo-holder:hover .textBlago {opacity:1;}
+
+/* Gellert profile */
+.logo-holder {position:relative; }
+.logo-holder #gellertPicture,
+.logo-holder .textGellert {transition: opacity 0.5s ease-in-out;}
+.logo-holder .textGellert {position:absolute; top:0; left:0; opacity:0;}
+
+.logo-holder:hover #gellertPicture {opacity:0;}
+.logo-holder:hover .textGellert {opacity:1;}
+
+/* Bronwen profile */
+.logo-holder {position:relative; }
+.logo-holder #bronwenPicture,
+.logo-holder .textBronwen {transition: opacity 0.5s ease-in-out;}
+.logo-holder .textBronwen {position:absolute; top:0; left:0; opacity:0;}
+
+.logo-holder:hover #bronwenPicture {opacity:0;}
+.logo-holder:hover .textBronwen {opacity:1;}

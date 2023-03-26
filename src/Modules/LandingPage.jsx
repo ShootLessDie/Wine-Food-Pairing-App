@@ -8,6 +8,7 @@ import wineStainImage from "../assets/images/wine-stain-5.png";
 import wineStainImage2 from "../assets/images/wine-stain-8.png";
 import { Button } from "@mui/material";
 import { NavLink, Link } from "react-router-dom";
+import clinkingGlasses from "../assets/animated-icons/clinking-glasses.gif";
 
 const LandingPage = () => {
   console.log(wineStainImage);
@@ -53,8 +54,20 @@ const LandingPage = () => {
               Your personal Sommelier, at your service...
             </h2>
             <Link to="/sommelier" style={{ textDecoration: 'none' }}>
-            <Button variant="contained" size="large" color="error" sx={{backgroundColor:"#ad0707"}} >
-              Show Recommendations
+            <Button variant="contained" size="large" color="error" sx={{
+              background: "linear-gradient(to right, maroon, red, purple)",
+              color: "white",
+              typography: "subtitle1",
+              fontFamily: "poor richard",
+              fontWeight: "bold",
+              fontSize: "1.5rem",
+              }} >
+              Show <br></br>Recommendations
+              <img
+             src={clinkingGlasses}
+             alt=""
+             style={{ width: "100px", marginLeft: "10px" }}
+           />
             </Button>
             </Link>
           </Box>
