@@ -58,7 +58,7 @@ const TeamPage = () => {
             <h2>Blago Dishkov</h2>
             <h3 className="textBlago">
               <br></br><br></br>Proffesion: Viticulturist
-
+            </h3>
             <h2 className="text">Blago Dishkov</h2>
             <h3 className="text">
               Proffesion: Viticulturist
@@ -93,7 +93,7 @@ const TeamPage = () => {
             <h2>Gellert Eke</h2>
             <h3 className="textGellert">
               <br></br><br></br>
-
+            </h3>
             <h2 className="text">Gellert Eke</h2>
             <h3 className="text">
 
@@ -133,7 +133,7 @@ const TeamPage = () => {
               Front-End Web Development Student 
               <br></br>
               <br></br>Studying with EdX Bootcamp
-
+            </h3>
              <br></br><br></br>  <img src={github} alt="GitHub" /> Github: <a href="https://github.com/Bronwen27">Bronwen27</a>
 
               <br></br><br></br>  <img src={linkedin} alt="GitHub" /> LinkedIn: <a href="https://www.linkedin.com/in/bronwen-jenner-a376a5195/ ">Bronwen-Jenner</a>
