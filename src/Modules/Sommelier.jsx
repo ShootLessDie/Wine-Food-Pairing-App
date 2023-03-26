@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { QueryClient, QueryClientProvider, useQuery } from "react-query";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import wines from "../wines.json";
 import "./Sommelier.css";

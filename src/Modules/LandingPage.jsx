@@ -7,7 +7,7 @@ import image from "../assets/icons/wineGlassBottle.png";
 import wineStainImage from "../assets/images/wine-stain-5.png";
 import wineStainImage2 from "../assets/images/wine-stain-8.png";
 import { Button } from "@mui/material";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 //import clinkingGlasses from "../assets/animated-icons/clinking-glasses.gif";
 
 const LandingPage = () => {
