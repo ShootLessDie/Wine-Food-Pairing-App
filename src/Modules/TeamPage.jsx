@@ -54,9 +54,15 @@ const TeamPage = () => {
               onMouseOver={handleHover}
               onMouseOut={handleMouseOut}
             />
+
             <h2>Blago Dishkov</h2>
             <h3 className="textBlago">
               <br></br><br></br>Proffesion: Viticulturist
+
+            <h2 className="text">Blago Dishkov</h2>
+            <h3 className="text">
+              Proffesion: Viticulturist
+
 
              <br></br><br></br> Hobby: Wine, Football, Fishing
 
@@ -83,9 +89,14 @@ const TeamPage = () => {
               alt=""
            
             />
+
             <h2>Gellert Eke</h2>
             <h3 className="textGellert">
               <br></br><br></br>
+
+            <h2 className="text">Gellert Eke</h2>
+            <h3 className="text">
+
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -115,6 +126,7 @@ const TeamPage = () => {
               alt=""
     
             />
+
              <h2>Bronwen Jenner</h2>
             <h3 className="textBronwen">
               <br></br><br></br>
@@ -125,6 +137,17 @@ const TeamPage = () => {
              <br></br><br></br>  <img src={github} alt="GitHub" /> Github: <a href="https://github.com/Bronwen27">Bronwen27</a>
 
               <br></br><br></br>  <img src={linkedin} alt="GitHub" /> LinkedIn: <a href="https://www.linkedin.com/in/bronwen-jenner-a376a5195/ ">Bronwen-Jenner</a>
+
+            <h2 className="text">Bronwen Jenner</h2>
+            <h3 className="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+
             </h3>
             </div>
           </Box>
