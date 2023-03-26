@@ -37,8 +37,8 @@ const TeamPage = () => {
               src={blago}
               alt=""
             />
-            <h2>Blago Dishkov</h2>
-            <h3>
+            <h2 className="text">Blago Dishkov</h2>
+            <h3 className="text">
               Proffesion: Viticulturist
 
              <br></br> Hobby: Wine, Football, Fishing
@@ -62,8 +62,8 @@ const TeamPage = () => {
               src={gellert}
               alt=""
             />
-            <h2>Gellert Eke</h2>
-            <h3>
+            <h2 className="text">Gellert Eke</h2>
+            <h3 className="text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -89,8 +89,8 @@ const TeamPage = () => {
               src={bronwen}
               alt=""
             />
-            <h2>Bronwen Jenner</h2>
-            <h3>
+            <h2 className="text">Bronwen Jenner</h2>
+            <h3 className="text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

@@ -164,3 +164,10 @@ h2 {
   background-clip: text;
   color: transparent;
 }
+
+h1,
+h2,
+h3,
+p {
+  color: #f6eee8;
+}
