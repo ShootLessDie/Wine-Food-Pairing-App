@@ -95,7 +95,7 @@ function Body() {
       <Container
         maxWidth="xl"
         sx={{
-          backgroundColor: "#fffffff2",
+          backgroundColor: "rgb(138, 18, 84)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
