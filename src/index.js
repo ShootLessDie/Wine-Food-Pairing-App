@@ -4,15 +4,33 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
+import { createTheme, responsiveFontSizes, ThemeProvider } from "@mui/material";
 
+let theme = createTheme({
+  typography: {
+    h1: {
+      fontFamily: "Playfair Display SC"
+    },
+    h2: {
+      fontFamily: "Playfair Display SC"
+    },
+    h3: {
+      fontFamily: "Playfair Display SC"
+    }
+  }
+})
+
+theme = responsiveFontSizes(theme)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   // <React.StrictMode>
-  <Router>
-    <App />
-  </Router>
+  <ThemeProvider theme={theme}>
+    <Router>
+      <App />
+    </Router>
+  </ThemeProvider>
   // </React.StrictMode>
 );
 

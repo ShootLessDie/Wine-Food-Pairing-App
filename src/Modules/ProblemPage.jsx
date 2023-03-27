@@ -1,29 +1,36 @@
-import { Box, Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import React from "react";
+import "./ProblemPage.css";
 
 const ProblemPage = () => {
   return (
-    <Container
-      maxWidth="1"
-      sx={{ height: "80vh", width: "80%", borderRadius: "10px", boxShadow: 2 }}
-      className="containerClass"
-    >
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100%",
-          flexDirection: "column",
-        }}
-      >
-        <h1 id="gradient-text">The Wine & Food Pairing App</h1>
-        
-        <h2 style={{color: "#f6eee8"}}>
-            <span class="from">From novice to connoisseur… </span>this app is designed to be used by all as the perfect accompaniment to any truly great dining experience. <br></br>
-            <br></br>Simply enter either the meal or wine that you wish to pair to generate a list of suitable culinary companions. <br></br>
-            <br></br>Hosting the perfect dinner party has never been easier!
-            </h2>
+    <Container maxWidth="lg" className="containerClass" sx={{
+      boxShadow: "0rem 0rem 2rem 1rem rgb(0,0,0, 0.4)",
+      border: "1px solid rgb(187 31 59 / 50%)",
+      margin: "3rem auto",
+      borderRadius: "1rem"
+    }}>
+      <Box paddingY={5} overflow="hidden">
+        <Typography marginY={4} variant="h1" className="gradient-headline">
+          The Wine & Food Pairing App
+        </Typography>
+        <Typography className="problem-page-intruduction" variant="p">
+          <Typography
+            marginY={3}
+            textAlign="center"
+            className="problem-page-subtitle"
+            variant="h2"
+          >
+            From novice to connoisseur…
+          </Typography>
+          <Typography textAlign="center" variant="h4" >
+            This app is designed to be used by all as the perfect accompaniment
+            to any truly great dining experience. Simply enter either the meal
+            or wine that you wish to pair to generate a list of suitable
+            culinary companions. Hosting the perfect dinner party has never been
+            easier!
+          </Typography>
+        </Typography>
       </Box>
     </Container>
   );

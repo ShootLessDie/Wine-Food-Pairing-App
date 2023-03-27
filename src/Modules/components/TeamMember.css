@@ -1,0 +1,37 @@
+.profile-picture {
+  width: 100%;
+  height: 20rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20rem;
+  border: 10px solid #E4A9AB;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  box-shadow: 10px 10px 0px rgba(0,0,0, 0.3);
+}
+
+.team-page-member {
+  overflow: hidden;
+}
+
+
+.team-member-name {
+  color:#f6eee8;
+}
+
+.team-member-social-links a {
+  color: #f6eee8;
+}
+
+.team-member-profession {
+  color: #f6eee8;
+  text-align: center;
+}
+
+.team-member-hobby {
+  color: #f6eee8;
+}
+
+.team-member-description {
+  color: #f6eee8;
+}
