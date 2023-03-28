@@ -145,10 +145,12 @@ button:hover {
     font-family: 'Callie Chalk Font', sans-serif;
     font-size: 2rem;
   }
-  .pairings-container li {
+  .pairings-container ul {
   color:antiquewhite;
   font-family: 'Callie Chalk Font', sans-serif;
   font-size: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
   }
 
   .recommendations-container h2 {

@@ -188,16 +188,16 @@ function Body() {
               {type === "food" && (
                 <ul>
                   {pairings?.pairings?.map((value, index) => (
-                    <li key={index}>
+                    <ul key={index}>
                       <button onClick={(e) => onWineClick(e)}>{value}</button>
-                    </li>
+                    </ul>
                   ))}
                 </ul>
               )}
               {type === "wine" && (
                 <ul>
                   {pairings?.pairings?.map((value, index) => (
-                    <li key={index}>{value}</li>
+                    <ul key={index}>{value}</ul>
                   ))}
                 </ul>
               )}
