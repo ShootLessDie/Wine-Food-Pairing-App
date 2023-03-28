@@ -70,7 +70,8 @@ button {
 }
 
 button:hover {
-    background-color: #006666;
+  background: linear-gradient(to bottom, #885f65, #d6f75e);
+  color: #ffffff !important;
   }
 
 .search-form {
