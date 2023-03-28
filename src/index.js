@@ -19,11 +19,11 @@ let theme = createTheme({
     },
     title: {
       fontFamily: "Lily Script One",
-      fontSize: 100
+      fontSize: 100,
     },
     accentButton: {
       fontFamily: "Lily Script One",
-      fontSize: 30
+      fontSize: 30,
     },
   },
 });
