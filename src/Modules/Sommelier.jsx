@@ -182,7 +182,8 @@ function Body() {
         <section className="results-container">
           {!!pairings?.pairings?.length && (
             <aside className="pairings-container">
-              <h2>Pairs best with</h2>
+              <h1 class="menu">Menu</h1>
+              <h2>Pairs best with . . .</h2>
               {type === "food" && (
                 <ul>
                   {pairings?.pairings?.map((value, index) => (

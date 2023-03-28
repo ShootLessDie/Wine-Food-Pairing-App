@@ -99,7 +99,7 @@ button:hover {
     background-image: url(/src/assets/images/menu.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    margin-right: 35rem;
+    margin-right: 5rem;
     border-radius: 70px;
     padding-top: 10rem;
   }
@@ -108,37 +108,38 @@ button:hover {
     background-image: url(/src/assets/images/big-chalkboard.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    max-height: 30rem;
-    max-width: 30rem;
+    max-height: 70rem;
+    max-width: 60rem;
+    width: 40rem;
     border-radius: 90px;
+    border: 10px solid rgb(119, 58, 25);
   }
 
   .menu {
     text-decoration: underline;
+    color: antiquewhite;
+    font-family: 'Callie Chalk Font', sans-serif;
   }
 
   .wineGlass {
     width: 7rem;
   }
   
-
   .pairings-container h2{
     color:antiquewhite;
     font-family: 'Callie Chalk Font', sans-serif;
     font-size: 2rem;
-    padding-top: 1rem;
   }
 
   .pairings-container h3{
     color:antiquewhite;
     font-family: 'Callie Chalk Font', sans-serif;
-    font-size: 1.5rem;
-    padding-top: 1rem;
+    font-size: 2rem;
   }
   .pairings-container li {
   color:antiquewhite;
   font-family: 'Callie Chalk Font', sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   }
 
   h2 {
