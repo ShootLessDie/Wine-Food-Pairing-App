@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import wineBread from "../assets/animated-icons/wine-bread.gif";
 import wineGlass from "../assets/animated-icons/wineGlass.gif";
 import Box from "@mui/material/Box";
+import bottle from "../assets/images/bottle.jpg"
 
 // const Sommelier = () => {
 
@@ -216,7 +217,10 @@ function Body() {
                 {recommendations?.recommendedWines?.map((wine, index) => (
                   <li key={index}>
                     <h3>{wine.title}</h3>
-                    <img src={wine.imageUrl} alt={wine.title} />
+                    <div class="wine-container">
+                    <img class="bottle" src={bottle} alt="" />
+                    <img class="wine" src={wine.imageUrl} alt={wine.title} />
+                    </div>
                     <span className="wine-recommendations-price">
                       {wine.price}
                     </span>
