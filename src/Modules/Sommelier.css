@@ -144,19 +144,19 @@ button:hover {
   font-size: 2rem;
   }
 
-  h2 {
+  .recommendations-container h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: rgb(99, 32, 32);
     font-family: poor richard;
   }
   
-  ul {
+  .recommendations-container ul {
     list-style: none;
     padding: 0;
   }
   
-  li {
+  .recommendations-container li {
     margin-bottom: 0.5rem;
     text-align: center;
     align-items: center;
@@ -178,7 +178,7 @@ button:hover {
     margin-bottom: 0.5rem;
   }
   
-  p {
+  .recommendations-container p {
     font-size: 0.9rem;
     line-height: 1.2rem;
     margin-bottom: 0.5rem;
@@ -188,7 +188,7 @@ button:hover {
     padding-right: 8rem;
   }
 
-  h1, h2, h3, ul, li, .wine-recommendations-price, p {
+  .recommendations-container h1, h2, h3, ul, li, .wine-recommendations-price, p {
     color: rgb(99, 32, 32);
     text-align: center;
     align-items: center;
