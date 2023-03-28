@@ -25,6 +25,10 @@ p {
   margin-left: 2rem;
 }
 
+.wine-glass {
+  width: 7rem;
+}
+
 .search-below {
    color: antiquewhite;
    font-size: 2.5rem;
@@ -48,7 +52,8 @@ input {
     font-size: 1.8rem;
     font-family: 'Callie Chalk Font', sans-serif;
     background-color: rgb(24, 24, 24);
-    color:antiquewhite
+    color:antiquewhite;
+    margin-right: 10rem;
 }
 
 .MuiAutocomplete-listbox {
@@ -131,8 +136,9 @@ button:hover {
     font-family: 'Callie Chalk Font', sans-serif;
   }
 
-  .wineGlass {
+  .wine-glass {
     width: 7rem;
+    padding-right: 2rem;
   }
   
   .pairings-container h2{

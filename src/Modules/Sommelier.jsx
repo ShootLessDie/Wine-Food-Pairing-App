@@ -8,7 +8,9 @@ import Button from "@mui/material/Button";
 import { TypeAnimation } from "react-type-animation";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Link } from "react-router-dom";
-import wineBread from "../assets/animated-icons/wine-bread.gif"
+import wineBread from "../assets/animated-icons/wine-bread.gif";
+import wineGlass from "../assets/animated-icons/wineGlass.gif";
+import Box from "@mui/material/Box";
 
 // const Sommelier = () => {
 
@@ -146,7 +148,12 @@ function Body() {
         />
         <h3 class="search-below">Search below for the best food and wine pairings!<span></span><img class="wineBread" src={wineBread} alt="Wine Bread"/></h3>
         <br />
-
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+         <img
+          src={wineGlass}
+          alt="wine glass"
+          className="wine-glass"
+         />
         <Autocomplete
           // disablePortal
           className="search-input"
@@ -168,6 +175,7 @@ function Body() {
             <TextField {...params} label="Food or Wine" />
           )}
         />
+        </Box>
 
         <br />
         <Button
