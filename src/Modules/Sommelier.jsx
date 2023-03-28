@@ -64,8 +64,7 @@ function Body() {
       console.log(wine);
       console.log(wineForRecommendation);
       return fetch(
-        `${baseURL}/food/wine/recommendation?wine=${
-          wineForRecommendation || wine
+        `${baseURL}/food/wine/recommendation?wine=${wineForRecommendation || wine
         }&number=2&apiKey=${apiKey}`
       ).then((res) => res.json());
     },
@@ -109,20 +108,19 @@ function Body() {
             "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
         }}
       >
-
         <Link to="/" style={{ textDecoration: "none" }}>
           <Button
+            className="chalk-button"
             variant="outlined"
             size="large"
             color="error"
-            sx={{marginTop:"2em"}}
+            sx={{ marginTop: "2em" }}
           >
             <ArrowBackIcon sx={{ fontSize: "large" }} /> Back
           </Button>
         </Link>
 
-
-        <TypeAnimation 
+        <TypeAnimation
           className="type-animation"
           sequence={[
             // Same String at the start will only be typed once, initially
@@ -146,41 +144,41 @@ function Body() {
           //   style={{ fontSize: "2em" }}
           repeat={Infinity}
         />
-        <h3 class="search-below">Search below for the best food and wine pairings!<span></span><img class="wineBread" src={wineBread} alt="Wine Bread"/></h3>
+        <h3 className="search-below">
+          Search below for the best food and wine pairings!<span></span>
+          <img className="wineBread" src={wineBread} alt="Wine Bread" />
+        </h3>
         <br />
         <Box sx={{ display: "flex", alignItems: "center" }}>
-         <img
-          src={wineGlass}
-          alt="wine glass"
-          className="wine-glass"
-         />
-        <Autocomplete
-          // disablePortal
-          className="search-input"
-          freeSolo
-          id="combo-box-demo"
-          options={wineArray}
-          sx={{ width: 300 }}
-          value={searchItem}
-          onChange={(event, newValue) => {
-            console.log(newValue);
-            setSearchItem(newValue.label);
-          }}
-          inputValue={searchItem}
-          onInputChange={(event, newInputValue) => {
-            console.log(newInputValue);
-            setSearchItem(newInputValue);
-          }}
-          renderInput={(params) => (
-            <TextField {...params} label="Food or Wine" />
-          )}
-        />
+          <img src={wineGlass} alt="wine glass" className="wine-glass" />
+          <Autocomplete
+            // disablePortal
+            className="search-input"
+            freeSolo
+            id="combo-box-demo"
+            options={wineArray}
+            sx={{ width: 300 }}
+            value={searchItem}
+            onChange={(event, newValue) => {
+              console.log(newValue);
+              setSearchItem(newValue.label);
+            }}
+            inputValue={searchItem}
+            onInputChange={(event, newInputValue) => {
+              console.log(newInputValue);
+              setSearchItem(newInputValue);
+            }}
+            renderInput={(params) => (
+              <TextField {...params} label="Food or Wine" />
+            )}
+          />
         </Box>
 
         <br />
         <Button
           variant="contained"
           size="large"
+          className="chalk-button"
           onClick={() => onFormSubmit()}
           color="error"
           sx={{ backgroundColor: "#ad0707" }}
@@ -191,7 +189,7 @@ function Body() {
         <section className="results-container">
           {!!pairings?.pairings?.length && (
             <aside className="pairings-container">
-              <h1 class="menu">Menu</h1>
+              <h1 className="menu">Menu</h1>
               <h2>Pairs best with . . .</h2>
               {type === "food" && (
                 <ul>

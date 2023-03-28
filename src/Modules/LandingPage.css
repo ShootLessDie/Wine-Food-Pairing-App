@@ -9,6 +9,11 @@ body {
   z-index: -1;
 }
 
+.landing-container {
+  background: url(/src/assets/images/wine-stain-5.png) 20px no-repeat, linear-gradient(#551c36, #76284b);
+  background-position: center;
+}
+
 /* title color-changing animation */
 .title {
   font-family: Poor Richard;

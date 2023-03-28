@@ -9,18 +9,31 @@ import { createTheme, responsiveFontSizes, ThemeProvider } from "@mui/material";
 let theme = createTheme({
   typography: {
     h1: {
-      fontFamily: "Playfair Display SC"
+      fontFamily: "Playfair Display SC",
     },
     h2: {
-      fontFamily: "Playfair Display SC"
+      fontFamily: "Playfair Display SC",
     },
     h3: {
-      fontFamily: "Playfair Display SC"
-    }
-  }
-})
+      fontFamily: "Playfair Display SC",
+    },
+    title: {
+      fontFamily: "Lily Script One",
+      fontSize: 100
+    },
+    accentButton: {
+      fontFamily: "Lily Script One",
+      fontSize: 30
+    },
+  },
+});
 
-theme = responsiveFontSizes(theme)
+theme = responsiveFontSizes(theme, {
+  breakpoints: ["xs", "sm", "md", "lg"],
+  factor: 3,
+  disableAlign: true,
+  variants: ["h1", "h2", "h3", "h4", "title", "accentButton"],
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

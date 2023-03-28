@@ -1,91 +1,66 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Container } from "@mui/system";
-import Box from "@mui/material/Box";
+import { Grid, Typography, ButtonBase } from "@mui/material";
 import "./LandingPage.css";
-import Grid from "@mui/material/Unstable_Grid2";
-import image from "../assets/icons/wineGlassBottle.png";
-import wineStainImage from "../assets/images/wine-stain-5.png";
-import wineStainImage2 from "../assets/images/wine-stain-8.png";
-import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
 import clinkingGlasses from "../assets/animated-icons/clinking-glasses.gif";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
-  return (
-    <Container maxWidth="1" sx={{ width: "100%" }} className="containerClass">
-      <img
-        className="wineStain"
-        src={wineStainImage}
-        alt=""
-        height="400px"
-        width="400px"
-      />
-      <img
-        className="wineStain2"
-        src={wineStainImage2}
-        alt=""
-        height="400px"
-        width="400px"
-      />
+  const navigate = useNavigate();
 
-      <Grid container spacing={2} sx={{ height: "100vh", margin: 0 }}>
-        <Grid xs={8}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
-              flexDirection: "column",
-            }}
+  const goToAppPage = useCallback(() => {
+    navigate("/sommelier");
+  }, [navigate]);
+
+  return (
+    <Container
+      maxWidth="1"
+      sx={{
+        minHeight: "100vh",
+        overflow: "hidden",
+      }}
+      className="containerClass landing-container"
+    >
+      <Grid
+        container
+        justifyContent="space-between"
+        boxSizing="border-box"
+        paddingY={10}
+        direction="column"
+        height="100vh"
+      >
+        <Grid item>
+          <Typography
+            variant="title"
+            textAlign="center"
+            color="white"
+            overflow="hidden"
+            display="block"
           >
-            <h1 class="title">
-              <span class="title-word title-word-1">The </span>
-              <div class="title-word-container">
-                <span class="title-word title-word-2">Wine </span>
-                <span class="title-word title-word-3"> & </span>
-                <span class="title-word title-word-4"> Food </span>
-              </div>
-              <span class="title-word title-word-5">Pairing </span>
-              <span class="title-word title-word-6">App </span>
-            </h1>
-            <h2 class="line-1 anim-typewriter" id="landingH2">
-              Your personal Sommelier, at your service...
-            </h2>
-            <Link to="/sommelier" style={{ textDecoration: 'none' }}>
-            <Button variant="contained" size="large" color="error" sx={{
-              background: "linear-gradient(to right, maroon, red, purple)",
-              color: "white",
-              typography: "subtitle1",
-              fontFamily: "poor richard",
-              fontWeight: "bold",
-              fontSize: "1.5rem",
-              '&:hover': {
-                background: "linear-gradient(to right, purple, red, maroon)",
-              }
-              }} >
-              Show <br></br>Recommendations
-              <img
-             src={clinkingGlasses}
-             alt=""
-             style={{ width: "6rem", marginLeft: "1rem" }}
-           />
-            </Button>
-            </Link>
-          </Box>
+            The Wine & Food Pairing App
+          </Typography>
         </Grid>
-        <Grid xs={4}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
-              flexDirection: "column",
-            }}
-          >
-            <img src={image} alt="" className="wineImage" />
-          </Box>
+        <Grid item container justifyContent="center">
+          <Grid item>
+            <ButtonBase
+              sx={{
+                border: "2px solid white",
+                borderRadius: "1rem",
+                padding: "1rem",
+                color: "white",
+              }}
+              onClick={goToAppPage}
+            >
+              <Typography variant="accentButton">
+                Show Recommendations
+              </Typography>
+              <img
+                src={clinkingGlasses}
+                alt=""
+                style={{ width: "3rem", marginLeft: "1rem" }}
+              />
+            </ButtonBase>
+          </Grid>
         </Grid>
       </Grid>
     </Container>
