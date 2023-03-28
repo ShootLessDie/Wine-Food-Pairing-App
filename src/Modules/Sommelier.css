@@ -229,6 +229,18 @@ input {
     align-items: center;
   }
 
+  @media only screen and (max-width: 1500px) {
+    .results-container {
+      flex-direction: column;
+    }
+
+    .recommendations-container{
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+  }
+
   
   
 
