@@ -143,8 +143,9 @@ function Body() {
           //   style={{ fontSize: "2em" }}
           repeat={Infinity}
         />
-        <h3 class="search-below">Search below for the best food and wine pairings...</h3>
+        <h3 class="search-below">Search below for the best food and wine pairings</h3>
         <br />
+
         <Autocomplete
           // disablePortal
           className="search-input"
@@ -166,6 +167,7 @@ function Body() {
             <TextField {...params} label="Food or Wine" />
           )}
         />
+
         <br />
         <Button
           variant="contained"
