@@ -196,7 +196,7 @@ function Body() {
                 <ul>
                   {pairings?.pairings?.map((value, index) => (
                     <ul key={index}>
-                      <button onClick={(e) => onWineClick(e)}>{value}</button>
+                      <Button className="chalk-button" onClick={(e) => onWineClick(e)}>{value}</Button>
                     </ul>
                   ))}
                 </ul>
