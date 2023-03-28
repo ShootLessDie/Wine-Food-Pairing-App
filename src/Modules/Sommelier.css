@@ -185,9 +185,30 @@ button:hover {
     border-radius: 10px;
   }
 
+  .wine-container {
+    position: relative;
+  }
+  
+  .wine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 20rem;
+    margin-top: 12.5rem;
+    width: 6rem;
+    height: 7rem;
+  }
+  
+  .bottle {
+    z-index: -1;
+    width:6rem;
+  }
+
   .wineImg {
     padding-left: 5rem;
    }
+
+   
   
   .wine-recommendations-price {
     font-weight: bold;
