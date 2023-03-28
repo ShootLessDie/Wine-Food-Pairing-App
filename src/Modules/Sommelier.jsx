@@ -8,6 +8,9 @@ import Button from "@mui/material/Button";
 import { TypeAnimation } from "react-type-animation";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Link } from "react-router-dom";
+import wineBread from "../assets/animated-icons/wine-bread.gif";
+import wineGlass from "../assets/animated-icons/wineGlass.gif";
+import Box from "@mui/material/Box";
 
 // const Sommelier = () => {
 
@@ -95,7 +98,7 @@ function Body() {
       <Container
         maxWidth="xl"
         sx={{
-          backgroundColor: "#fffffff2",
+          backgroundColor: "rgb(138, 18, 84)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -119,7 +122,8 @@ function Body() {
         </Link>
 
 
-        <TypeAnimation
+        <TypeAnimation 
+          className="type-animation"
           sequence={[
             // Same String at the start will only be typed once, initially
             "I would like some...",
@@ -142,10 +146,17 @@ function Body() {
           //   style={{ fontSize: "2em" }}
           repeat={Infinity}
         />
-        <h3>Search below for the best food and wine pairings!</h3>
+        <h3 class="search-below">Search below for the best food and wine pairings!<span></span><img class="wineBread" src={wineBread} alt="Wine Bread"/></h3>
         <br />
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+         <img
+          src={wineGlass}
+          alt="wine glass"
+          className="wine-glass"
+         />
         <Autocomplete
           // disablePortal
+          className="search-input"
           freeSolo
           id="combo-box-demo"
           options={wineArray}
@@ -164,6 +175,8 @@ function Body() {
             <TextField {...params} label="Food or Wine" />
           )}
         />
+        </Box>
+
         <br />
         <Button
           variant="contained"
@@ -178,20 +191,21 @@ function Body() {
         <section className="results-container">
           {!!pairings?.pairings?.length && (
             <aside className="pairings-container">
-              <h2>Pairs best with</h2>
+              <h1 class="menu">Menu</h1>
+              <h2>Pairs best with . . .</h2>
               {type === "food" && (
                 <ul>
                   {pairings?.pairings?.map((value, index) => (
-                    <li key={index}>
+                    <ul key={index}>
                       <button onClick={(e) => onWineClick(e)}>{value}</button>
-                    </li>
+                    </ul>
                   ))}
                 </ul>
               )}
               {type === "wine" && (
                 <ul>
                   {pairings?.pairings?.map((value, index) => (
-                    <li key={index}>{value}</li>
+                    <ul key={index}>{value}</ul>
                   ))}
                 </ul>
               )}
