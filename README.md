@@ -10,6 +10,7 @@ We are using React.js which is one of the most popular library these days.
 Also we are using React Query which is a lightweight React library that enables developers to fetch and manage data in React applications. 
 
 # Visuals
+![Screenshot_62](https://user-images.githubusercontent.com/68082613/228315988-c26f52d4-c569-45ac-b9fb-a7e6f6152e41.png)
 
 
 # Installation
