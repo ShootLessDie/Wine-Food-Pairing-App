@@ -60,6 +60,9 @@ const LandingPage = () => {
               fontFamily: "poor richard",
               fontWeight: "bold",
               fontSize: "1.5rem",
+              '&:hover': {
+                background: "linear-gradient(to right, purple, red, maroon)",
+              }
               }} >
               Show <br></br>Recommendations
               <img
