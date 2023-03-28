@@ -12,6 +12,12 @@ Also we are using React Query which is a lightweight React library that enables 
 # Visuals
 ![Screenshot_62](https://user-images.githubusercontent.com/68082613/228315988-c26f52d4-c569-45ac-b9fb-a7e6f6152e41.png)
 
+# Presentation 
+
+For project presentation, please click on the following link: 
+
+https://docs.google.com/presentation/d/1TDvHJ4eQ44003y_9XlprWj1N-2PtGbyZTR8IQXIF9eU/edit?usp=sharing
+
 
 # Installation
 
