@@ -8,7 +8,7 @@ import wineStainImage from "../assets/images/wine-stain-5.png";
 import wineStainImage2 from "../assets/images/wine-stain-8.png";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-//import clinkingGlasses from "../assets/animated-icons/clinking-glasses.gif";
+import clinkingGlasses from "../assets/animated-icons/clinking-glasses.gif";
 
 const LandingPage = () => {
   return (
@@ -63,9 +63,9 @@ const LandingPage = () => {
               }} >
               Show <br></br>Recommendations
               <img
-             //src={clinkingGlasses}
+             src={clinkingGlasses}
              alt=""
-             style={{ width: "100px", marginLeft: "10px" }}
+             style={{ width: "6rem", marginLeft: "1rem" }}
            />
             </Button>
             </Link>
