@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import { TypeAnimation } from "react-type-animation";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Link } from "react-router-dom";
+import wineBread from "../assets/animated-icons/wine-bread.gif"
 
 // const Sommelier = () => {
 
@@ -143,7 +144,7 @@ function Body() {
           //   style={{ fontSize: "2em" }}
           repeat={Infinity}
         />
-        <h3 class="search-below">Search below for the best food and wine pairings!</h3>
+        <h3 class="search-below">Search below for the best food and wine pairings!<span></span><img class="wineBread" src={wineBread} alt="Wine Bread"/></h3>
         <br />
 
         <Autocomplete
