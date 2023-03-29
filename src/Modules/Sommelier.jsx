@@ -18,7 +18,7 @@ import bottle from "../assets/images/bottle.jpg"
 const queryClient = new QueryClient();
 
 const baseURL = "https://api.spoonacular.com";
-const apiKey = " 82c479322f144ddcadd329f82e770dec";
+const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
 // the begining of composition
 function Sommelier() {
